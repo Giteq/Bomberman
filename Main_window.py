@@ -67,9 +67,11 @@ class MyView(QGraphicsView):
         self.textbox.setPlainText("Score = " + str(self.score))
 
         self.scene.addItem(self.textbox)
+        self.items = self.scene.items()
 
     def clicked_reset(self):
         self.__init_game()
+        self.__init_ui()
 
     def initBoard(self):
         '''initiates board'''
@@ -84,15 +86,17 @@ class MyView(QGraphicsView):
         self.numLinesRemoved = 0
         self.board = []
 
-    def get_obj_ind(self, x, y):
-        for i in range(len(self.itemy)):
-            if self.itemy[i].x == x and self.itemy[i].y == y:
-                return i
+    def get_obj(self, x, y):
+        for item in self.items:
+            if item.x == x and item.y == y:
+                return item
+            else:
+                return None
 
     def get_label_from_scene(self):
         ret = -1
-        for i in range(len(self.itemy)):
-            if isinstance(self.itemy[i], type(QtWidgets.QGraphicsTextItem())):
+        for i in range(len(self.items)):
+            if isinstance(self.items[i], type(QtWidgets.QGraphicsTextItem())):
                 ret = i
         return ret
 
@@ -170,13 +174,13 @@ class MyView(QGraphicsView):
                     self.draw_image(i, j, self.path_bot)
 
     def create_board(self):
-        temp = numpy.zeros((self.MAP_WIDTH, self.MAP_HEIGHT) , dtype=bool)
+        temp = numpy.zeros((self.MAP_WIDTH, self.MAP_HEIGHT), dtype=bool)
         temp = temp.astype(str)
         for x in range(self.MAP_WIDTH):
             for y in range(self.MAP_HEIGHT):
                 if x == 0 or y == 0 or x == self.MAP_WIDTH - 1 or y == self.MAP_HEIGHT - 1:
                     temp[x][y] = "##"
-                elif x%2 == 0 and y%2 == 0:
+                elif x % 2 == 0 and y % 2 == 0:
                     temp[x][y] = "##"
                 else:
                     temp[x][y] = "**"
@@ -204,18 +208,20 @@ class MyView(QGraphicsView):
                 temp[15][17] = "  "
                 temp[15][15] = "  "
                 temp[15][14] = "  "
+
         self.board = temp
 
     def draw_image(self, x, y, path):
-        #Usuwanie itemow ze sceny
-        self.itemy = self.scene.items()
-        if len(self.itemy) > self.MAP_HEIGHT * self.MAP_WIDTH:
-            ind = self.get_obj_ind(x, y)
-            self.scene.removeItem(self.itemy[ind])
-        self.item = MyRect.MyRect(x, y, path)
-        self.item.setAcceptHoverEvents(True)
-        self.item.setFlag(QtWidgets.QGraphicsItem.ItemIsMovable)
-        self.scene.addItem(self.item)
+        # Remove items from scene.
+        self.items = self.scene.items()
+        item = self.get_obj(x, y)
+        if len(self.items) > self.MAP_HEIGHT * self.MAP_WIDTH:
+            if item is not None:
+                self.scene.removeItem(item)
+        item = MyRect.MyRect(x, y, path)
+        item.setAcceptHoverEvents(True)
+        # item.setFlag(QtWidgets.QGraphicsItem.ItemIsMovable)
+        self.scene.addItem(item)
 
     def keyPressEvent(self, event):
         '''processes key press events'''
@@ -241,40 +247,40 @@ class MyView(QGraphicsView):
             if self.player.allive:
                 self.add_bomb(self.player)
 
-    def move_up(self, gracz):
-        if gracz.Y < self.MAP_HEIGHT - 1 and self.board[gracz.X][gracz.Y + 1] != '**'\
-                and self.board[gracz.X][gracz.Y + 1] != '##':
-            self.board[gracz.X][gracz.Y] = '  '
-            gracz.move('u')
+    def move_up(self, player):
+        if player.Y < self.MAP_HEIGHT - 1 and self.board[player.X][player.Y + 1] != '**'\
+                and self.board[player.X][player.Y + 1] != '##':
+            self.board[player.X][player.Y] = '  '
+            player.move('u')
 
-    def move_down(self, gracz):
-        if gracz.Y > 1 and self.board[gracz.X][gracz.Y - 1] != '**'\
-                and self.board[gracz.X][gracz.Y - 1] != '##':
-            self.board[gracz.X][gracz.Y] = '  '
-            gracz.move('d')
+    def move_down(self, player):
+        if player.Y > 1 and self.board[player.X][player.Y - 1] != '**'\
+                and self.board[player.X][player.Y - 1] != '##':
+            self.board[player.X][player.Y] = '  '
+            player.move('d')
 
-    def move_left(self, gracz):
-        if gracz.X > 1 and self.board[gracz.X - 1][gracz.Y] != '**'\
-                and self.board[gracz.X - 1][gracz.Y] != '##':
-            self.board[gracz.X][gracz.Y] = '  '
-            gracz.move('l')
+    def move_left(self, player):
+        if player.X > 1 and self.board[player.X - 1][player.Y] != '**'\
+                and self.board[player.X - 1][player.Y] != '##':
+            self.board[player.X][player.Y] = '  '
+            player.move('l')
 
-    def move_right(self, gracz):
-        if gracz.X < self.MAP_HEIGHT - 1 and self.board[gracz.X + 1][gracz.Y] != '**'\
-                and self.board[gracz.X + 1][gracz.Y] != '##':
-            self.board[gracz.X][gracz.Y] = '  '
-            gracz.move('r')
+    def move_right(self, player):
+        if player.X < self.MAP_HEIGHT - 1 and self.board[player.X + 1][player.Y] != '**'\
+                and self.board[player.X + 1][player.Y] != '##':
+            self.board[player.X][player.Y] = '  '
+            player.move('r')
 
     def add_bomb(self, gracz):  # poruszanie sie
         self.bombs.append(Bomba.Bomba(gracz.X, gracz.Y, time.time(), gracz.indeks))
 
     def boom(self):
-        for bomba in self.bombs:
-            if time.time() - bomba.start > 3:
-                self.clean_fields_after_boom(bomba)
-                self.kill_players(bomba)
-                self.bombs.remove(bomba)
-                if bomba.wlasciciel == self.player.indeks:
+        for bomb in self.bombs:
+            if time.time() - bomb.start > 3:
+                self.clean_fields_after_boom(bomb)
+                self.kill_players(bomb)
+                self.bombs.remove(bomb)
+                if bomb.wlasciciel == self.player.indeks:
                     self.score += 1
 
     def clean_fields_after_boom(self, bomb):
@@ -332,16 +338,16 @@ class MyView(QGraphicsView):
             bot.remember_bombs(self.bombs)
 
 
-class window(QtWidgets.QMainWindow):
+class Window(QtWidgets.QMainWindow):
     def __init__(self):
-        super(window, self).__init__()
+        super(Window, self).__init__()
         self.view = MyView()
         self.setCentralWidget(self.view)
 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    view = window()
+    view = Window()
     view.show()
     sys.exit(app.exec_())
 
