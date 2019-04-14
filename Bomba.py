@@ -1,9 +1,10 @@
-class Bomba:
-    def __init__(self, X, Y, start, wlasciciel):
-        self.X = X
-        self.Y = Y
-        self.wybuchnieta = False
+class Bomb:
+    def __init__(self, x, y, start, owner):
+        self.x = x
+        self.y = y
+        self.exploded = False
         self.start = start
-        self.wlasciciel = wlasciciel
-    def wybucham(self):
-        self.wybuchnieta = True
+        self.owner = owner
+
+    def boom(self):
+        self.exploded = True

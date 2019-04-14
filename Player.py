@@ -1,25 +1,25 @@
 class Player:
-    def __init__(self, X, Y, ind):
-        self.indeks = ind
-        self.X = X
-        self.Y = Y
-        self.allive = True
-        self.last_x = X
-        self.last_y = Y
+    def __init__(self, x, y, ind):
+        self.ind = ind
+        self.x = x
+        self.y = y
+        self.alive = True
+        self.last_x = x
+        self.last_y = y
 
     def reset(self):
-        self.X = 1
-        self.Y = 1
-        self.allive = True
+        self.x = 1
+        self.y = 1
+        self.alive = True
 
-    def move(self, dir):
-        self.last_x = self.X
-        self.last_y = self.Y
-        if dir == 'l':
-            self.X -= 1
-        elif dir == 'r':
-            self.X += 1
-        elif dir == 'd':
-            self.Y -= 1
-        elif dir == 'u':
-            self.Y += 1
+    def move(self , direction):
+        self.last_x = self.x
+        self.last_y = self.y
+        if direction == 'l':
+            self.x -= 1
+        elif direction == 'r':
+            self.x += 1
+        elif direction == 'd':
+            self.y -= 1
+        elif direction == 'u':
+            self.y += 1
