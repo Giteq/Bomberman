@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01d503f1-0d04-49b3-93a3-9b5ff8613bb3" name="Default" comment="Fixed error in Reset button.">
-      <change afterPath="$PROJECT_DIR$/GameParams.py" afterDir="false" />
+    <list default="true" id="01d503f1-0d04-49b3-93a3-9b5ff8613bb3" name="Default" comment="Refactoring.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bomba.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bomba.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Bomberman$Main_window.coverage" NAME="Main_window Coverage Results" MODIFIED="1555241296220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bomberman$Main_window.coverage" NAME="Main_window Coverage Results" MODIFIED="1555246053617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-482785752">
@@ -28,25 +25,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Python Console" value="4" />
           <entry key="dummy" value="104" />
-          <entry key="py" value="1766" />
-          <entry key="txt" value="42" />
+          <entry key="py" value="3651" />
+          <entry key="txt" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="146" />
-          <entry key="Python" value="1766" />
+          <entry key="PLAIN_TEXT" value="170" />
+          <entry key="Python" value="3655" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="4" />
+          <entry key="py" value="5" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="4" />
+          <entry key="Python" value="5" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyRect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="105">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -68,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bomba.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -77,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="162" column="36" lean-forward="true" selection-start-line="162" selection-start-column="36" selection-end-line="162" selection-end-column="36" />
+            <state relative-caret-position="110">
+              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -89,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -98,14 +98,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="309" column="52" selection-start-line="309" selection-start-column="52" selection-end-line="309" selection-end-column="52" />
+            <state relative-caret-position="150">
+              <caret line="388" column="44" selection-start-line="388" selection-start-column="44" selection-end-line="388" selection-end-column="44" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1555241268228" expanded="true" signature="315:320" ph="..." />
-                <marker date="1555241268228" expanded="true" signature="669:1039" ph="..." />
-                <marker date="1555241268228" expanded="true" signature="1034:1035" ph="..." />
-                <marker date="1555241268228" expanded="true" signature="1301:1388" ph="..." />
+                <marker date="1555245918199" expanded="true" signature="345:346" ph="..." />
+                <marker date="1555245918199" expanded="true" signature="734:1343" ph="..." />
+                <marker date="1555245918199" expanded="true" signature="1338:1339" ph="..." />
+                <marker date="1555245918199" expanded="true" signature="1605:1692" ph="..." />
               </folding>
             </state>
           </provider>
@@ -114,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameParams.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            <state relative-caret-position="187">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -131,17 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.MAP_WIDTH</find>
-      <find>self.WINDOW_HEIGHT</find>
-      <find>self.WINDOW_WIDTH</find>
-      <find>self.RECT_HEIGHT</find>
-      <find>self.RECT_WIDTH</find>
-      <find>self.path_bomb</find>
-      <find>self.path_bomberman</find>
-      <find>self.path_bot</find>
-      <find>self.path_can_destroy</find>
-      <find>self.path_cant_destroy</find>
-      <find>self.path_road</find>
       <find>self.MAP_HEIGHT</find>
       <find>players</find>
       <find>curX</find>
@@ -159,8 +148,19 @@
       <find>bots[i].Y</find>
       <find>bot.Y</find>
       <find>players[0].Y</find>
-      <find>get_label_from_scene</find>
       <find>self.Y</find>
+      <find>player.Y</find>
+      <find>draw_board</find>
+      <find>move_lef</find>
+      <find>bomb.</find>
+      <find>Bomba.bom</find>
+      <find>click</find>
+      <find>get_label_from_scene</find>
+      <find>boo</find>
+      <find>kill_players</find>
+      <find>end</find>
+      <find>end_signal</find>
+      <find>end_</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -181,8 +181,9 @@
       <replace>bots[i].y</replace>
       <replace>bot.y</replace>
       <replace>players[0].y</replace>
-      <replace>MAP_WIDTH</replace>
       <replace>self.y</replace>
+      <replace>MAP_WIDTH</replace>
+      <replace>player.y</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -195,9 +196,10 @@
         <option value="$PROJECT_DIR$/Bombarman_bot.py" />
         <option value="$PROJECT_DIR$/../../Aserehe/aseid-2018-Giteq/Dijkstra.py" />
         <option value="$PROJECT_DIR$/Images/GameParams.py" />
-        <option value="$PROJECT_DIR$/Bomba.py" />
-        <option value="$PROJECT_DIR$/Player.py" />
         <option value="$PROJECT_DIR$/Bot.py" />
+        <option value="$PROJECT_DIR$/Player.py" />
+        <option value="$PROJECT_DIR$/Bomba.py" />
+        <option value="$PROJECT_DIR$/GameParams.py" />
         <option value="$PROJECT_DIR$/Main_window.py" />
       </list>
     </option>
@@ -224,11 +226,6 @@
             <path>
               <item name="Bomberman" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bomberman" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bomberman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bomberman" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bomberman" type="b2602c69:ProjectViewProjectNode" />
@@ -368,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555239283889</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactoring.">
+      <created>1555241339934</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555241339934</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -382,14 +386,14 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32740214" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4572954" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32740214" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4572954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291815" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291815" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3291815" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="SciView" weight="0.51174086" />
       <window_info anchor="right" id="Database" />
@@ -405,11 +409,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring." />
     <MESSAGE value="Fixed error in Reset button." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed error in Reset button." />
+    <MESSAGE value="Refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring." />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Main_window.py</url>
+          <line>324</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="self.X" language="Python" />
@@ -462,10 +475,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Projekty/WinPython-64bit-3.6.3.0Qt5/python-3.6.3.amd64/Lib/xml/dom/minidom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="1545" column="8" selection-start-line="1545" selection-start-column="8" selection-end-line="1545" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3060" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyRect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="105">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -474,45 +506,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Bomba.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameParams.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="162" column="36" lean-forward="true" selection-start-line="162" selection-start-column="36" selection-end-line="162" selection-end-column="36" />
+        <state relative-caret-position="110">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GameParams.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="309" column="52" selection-start-line="309" selection-start-column="52" selection-end-line="309" selection-end-column="52" />
+        <state relative-caret-position="150">
+          <caret line="388" column="44" selection-start-line="388" selection-start-column="44" selection-end-line="388" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1555241268228" expanded="true" signature="315:320" ph="..." />
-            <marker date="1555241268228" expanded="true" signature="669:1039" ph="..." />
-            <marker date="1555241268228" expanded="true" signature="1034:1035" ph="..." />
-            <marker date="1555241268228" expanded="true" signature="1301:1388" ph="..." />
+            <marker date="1555245918199" expanded="true" signature="345:346" ph="..." />
+            <marker date="1555245918199" expanded="true" signature="734:1343" ph="..." />
+            <marker date="1555245918199" expanded="true" signature="1338:1339" ph="..." />
+            <marker date="1555245918199" expanded="true" signature="1605:1692" ph="..." />
           </folding>
         </state>
       </provider>
