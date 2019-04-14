@@ -26,7 +26,6 @@ class Bot(Player):
         self.bombs = bombs
 
     def is_bomb_there(self , dir):
-
         if dir == "r":
             if self.X + 2 < self.MAP_WIDTH and self.Y + 1 < self.MAP_WIDTH and self.X > 0 and self.Y > 0:
                 if self.board[self.X+1][self.Y+1] == "XX" or self.board[self.X+2][self.Y] == "XX" or self.board[self.X+1][self.Y-1] == "XX" or \

@@ -143,12 +143,12 @@ class MyView(QGraphicsView):
         with open('somefile.xml', 'w') as the_file:
             the_file.write(doc.toprettyxml())
 
-    def draw_board(self):  # rysowanie planszy
+    def draw_board(self):
         self.scene.clear()
         for bomba in self.bombs:
-            self.board[bomba.X][bomba.Y] = 'XX'  # wstawiamy bomby w plansze
+            self.board[bomba.X][bomba.Y] = 'XX'
         if self.player.allive:
-            self.board[self.player.X][self.player.Y] = 'OO'  # wstawiamy gracza w plansze (usuwanie starego pionka gracza w linijce 57)
+            self.board[self.player.X][self.player.Y] = 'OO'
 
         for bot in self.bots:
             if bot.allive:
@@ -169,7 +169,7 @@ class MyView(QGraphicsView):
                 elif self.board[i][j] == 'BB':
                     self.draw_image(i, j, self.path_bot)
 
-    def create_board(self):  # tworzenie planszy stringow z tablicy true/false wygenerowanej przez funkcje maze
+    def create_board(self):
         temp = numpy.zeros((self.MAP_WIDTH, self.MAP_HEIGHT) , dtype=bool)
         temp = temp.astype(str)
         for x in range(self.MAP_WIDTH):
@@ -268,55 +268,52 @@ class MyView(QGraphicsView):
     def add_bomb(self, gracz):  # poruszanie sie
         self.bombs.append(Bomba.Bomba(gracz.X, gracz.Y, time.time(), gracz.indeks))
 
-    #Obsluga wybuchania bomba
     def boom(self):
         for bomba in self.bombs:
             if time.time() - bomba.start > 3:
-            #if bomba.wybuchnieta:
                 self.clean_fields_after_boom(bomba)
                 self.kill_players(bomba)
                 self.bombs.remove(bomba)
                 if bomba.wlasciciel == self.player.indeks:
                     self.score += 1
 
-    #Czyszczenie pol naokolo bomby
-    def clean_fields_after_boom(self, bomba):
-        if self.board[bomba.X][bomba.Y + 1] != "##":
-            self.board[bomba.X][bomba.Y + 1] = "  "
-            self.draw_image(bomba.X, bomba.Y + 1, self.path_road)
+    def clean_fields_after_boom(self, bomb):
+        if self.board[bomb.X][bomb.Y + 1] != "##":
+            self.board[bomb.X][bomb.Y + 1] = "  "
+            self.draw_image(bomb.X, bomb.Y + 1, self.path_road)
 
-        if self.board[bomba.X][bomba.Y - 1] != "##":
-            self.board[bomba.X][bomba.Y - 1] = "  "
-            self.draw_image(bomba.X, bomba.Y - 1, self.path_road)
+        if self.board[bomb.X][bomb.Y - 1] != "##":
+            self.board[bomb.X][bomb.Y - 1] = "  "
+            self.draw_image(bomb.X, bomb.Y - 1, self.path_road)
 
-        if self.board[bomba.X + 1][bomba.Y] != "##":
-            self.board[bomba.X + 1][bomba.Y] = "  "
-            self.draw_image(bomba.X + 1, bomba.Y, self.path_road)
+        if self.board[bomb.X + 1][bomb.Y] != "##":
+            self.board[bomb.X + 1][bomb.Y] = "  "
+            self.draw_image(bomb.X + 1, bomb.Y, self.path_road)
 
-        if self.board[bomba.X - 1][bomba.Y] != "##":
-            self.board[bomba.X - 1][bomba.Y] = "  "
-            self.draw_image(bomba.X - 1, bomba.Y, self.path_road)
+        if self.board[bomb.X - 1][bomb.Y] != "##":
+            self.board[bomb.X - 1][bomb.Y] = "  "
+            self.draw_image(bomb.X - 1, bomb.Y, self.path_road)
 
-        self.board[bomba.X][bomba.Y] = "  "
-        self.draw_image(bomba.X, bomba.Y, self.path_road)
+        self.board[bomb.X][bomb.Y] = "  "
+        self.draw_image(bomb.X, bomb.Y, self.path_road)
 
-    def kill_players(self, bomba):
-        if self.player.X == bomba.X + 1 and self.player.Y == bomba.Y:
+    def kill_players(self, bomb):
+        if self.player.X == bomb.X + 1 and self.player.Y == bomb.Y:
             self.player.allive = False
-        if self.player.X == bomba.X - 1 and self.player.Y == bomba.Y:
+        if self.player.X == bomb.X - 1 and self.player.Y == bomb.Y:
             self.player.allive = False
-        if self.player.X == bomba.X and self.player.Y == bomba.Y + 1:
+        if self.player.X == bomb.X and self.player.Y == bomb.Y + 1:
             self.player.allive = False
-        if self.player.X == bomba.X and self.player.Y == bomba.Y - 1:
+        if self.player.X == bomb.X and self.player.Y == bomb.Y - 1:
             self.player.allive = False
         for bot in self.bots:
-            if bot.X == bomba.X + 1 and bot.Y == bomba.Y:
+            if bot.X == bomb.X + 1 and bot.Y == bomb.Y:
                 bot.allive = False
-            if bot.X == bomba.X - 1 and bot.Y == bomba.Y:
+            if bot.X == bomb.X - 1 and bot.Y == bomb.Y:
                 bot.allive = False
-            if bot.X == bomba.X and bot.Y == bomba.Y + 1:
+            if bot.X == bomb.X and bot.Y == bomb.Y + 1:
                 bot.allive = False
-            if bot.X == bomba.X and bot.Y == bomba.Y - 1:
+            if bot.X == bomb.X and bot.Y == bomb.Y - 1:
                 bot.allive = False
 
     def move_bot(self):
@@ -334,11 +331,13 @@ class MyView(QGraphicsView):
             bot.remember_board(self.board)
             bot.remember_bombs(self.bombs)
 
+
 class window(QtWidgets.QMainWindow):
-    def __init__(self, parent=None):
+    def __init__(self):
         super(window, self).__init__()
         self.view = MyView()
         self.setCentralWidget(self.view)
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
