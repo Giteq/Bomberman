@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01d503f1-0d04-49b3-93a3-9b5ff8613bb3" name="Default" comment="Refactoring.">
+    <list default="true" id="01d503f1-0d04-49b3-93a3-9b5ff8613bb3" name="Default" comment="Added possibility to change bombs range. &#10;Added messagebox after death of the player.">
+      <change afterPath="$PROJECT_DIR$/GameMap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bomba.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bomba.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bomba.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bomb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyRect.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyRect.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,39 +15,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Bomberman$Main_window.coverage" NAME="Main_window Coverage Results" MODIFIED="1555246053617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bomberman$Main_window.coverage" NAME="Main_window Coverage Results" MODIFIED="1555277871103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-482785752">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="4" />
           <entry key="dummy" value="104" />
-          <entry key="py" value="3651" />
-          <entry key="txt" value="66" />
+          <entry key="py" value="4434" />
+          <entry key="txt" value="173" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="170" />
-          <entry key="Python" value="3655" />
+          <entry key="PLAIN_TEXT" value="277" />
+          <entry key="Python" value="4438" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="5" />
+          <entry key="py" value="8" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="5" />
+          <entry key="Python" value="8" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -54,27 +58,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyRect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Bomba.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
@@ -82,6 +65,15 @@
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bomb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -98,14 +90,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="388" column="44" selection-start-line="388" selection-start-column="44" selection-end-line="388" selection-end-column="44" />
+            <state relative-caret-position="245">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1555245918199" expanded="true" signature="345:346" ph="..." />
-                <marker date="1555245918199" expanded="true" signature="734:1343" ph="..." />
-                <marker date="1555245918199" expanded="true" signature="1338:1339" ph="..." />
-                <marker date="1555245918199" expanded="true" signature="1605:1692" ph="..." />
+                <marker date="1555277717323" expanded="true" signature="106:108" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameMap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameParams.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state>
+              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -131,8 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.MAP_HEIGHT</find>
-      <find>players</find>
       <find>curX</find>
       <find>curY</find>
       <find>numLinesRemoved</find>
@@ -143,7 +142,6 @@
       <find>nodes</find>
       <find>bombs</find>
       <find>add_bomb</find>
-      <find>bomb</find>
       <find>bomb.wlasciciel</find>
       <find>bots[i].Y</find>
       <find>bot.Y</find>
@@ -161,6 +159,9 @@
       <find>end</find>
       <find>end_signal</find>
       <find>end_</find>
+      <find>self.WYSOKOSC_KWADRATU</find>
+      <find>kill</find>
+      <find>bomb</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -168,7 +169,6 @@
       <replace>MAP_HEIGHT</replace>
       <replace>WINDOW_HEIGHT</replace>
       <replace>WINDOW_WIDTH</replace>
-      <replace>RECT_HEIGHT</replace>
       <replace>RECT_WIDTH</replace>
       <replace>path_bomb</replace>
       <replace>path_bomberman</replace>
@@ -184,6 +184,7 @@
       <replace>self.y</replace>
       <replace>MAP_WIDTH</replace>
       <replace>player.y</replace>
+      <replace>RECT_HEIGHT</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -192,14 +193,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MyRect.py" />
         <option value="$PROJECT_DIR$/Bombarman_bot.py" />
         <option value="$PROJECT_DIR$/../../Aserehe/aseid-2018-Giteq/Dijkstra.py" />
         <option value="$PROJECT_DIR$/Images/GameParams.py" />
         <option value="$PROJECT_DIR$/Bot.py" />
         <option value="$PROJECT_DIR$/Player.py" />
-        <option value="$PROJECT_DIR$/Bomba.py" />
         <option value="$PROJECT_DIR$/GameParams.py" />
+        <option value="$PROJECT_DIR$/MyRect.py" />
+        <option value="$PROJECT_DIR$/Bomba.py" />
+        <option value="$PROJECT_DIR$/GameMap.py" />
+        <option value="$PROJECT_DIR$/Bomb.py" />
         <option value="$PROJECT_DIR$/Main_window.py" />
       </list>
     </option>
@@ -213,7 +216,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="width" value="900" />
-    <option name="height" value="1031" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -372,18 +375,23 @@
       <option name="project" value="LOCAL" />
       <updated>1555241339934</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added possibility to change bombs range. &#10;Added messagebox after death of the player.">
+      <created>1555246107811</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555246107811</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.254251" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2582996" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32740214" />
@@ -395,11 +403,13 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3291815" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3291815" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="SciView" weight="0.51174086" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.51174086" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,15 +421,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed error in Reset button." />
     <MESSAGE value="Refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring." />
+    <MESSAGE value="Added possibility to change bombs range. &#10;Added messagebox after death of the player." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added possibility to change bombs range. &#10;Added messagebox after death of the player." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Main_window.py</url>
-          <line>324</line>
-          <option name="timeStamp" value="13" />
+          <line>23</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -482,9 +493,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.xml">
+    <entry file="file://$PROJECT_DIR$/map.xml" />
+    <entry file="file://$PROJECT_DIR$/MyRect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3060" />
+        <state relative-caret-position="153">
+          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Player.py">
@@ -494,20 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyRect.py">
+    <entry file="file://$PROJECT_DIR$/GameParams.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bomba.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -521,23 +528,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameParams.py">
+    <entry file="file://$PROJECT_DIR$/Bomb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="17">
+          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-2139300485/PyQt5/QtWidgets/QDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="388" column="44" selection-start-line="388" selection-start-column="44" selection-end-line="388" selection-end-column="44" />
+        <state relative-caret-position="245">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1555245918199" expanded="true" signature="345:346" ph="..." />
-            <marker date="1555245918199" expanded="true" signature="734:1343" ph="..." />
-            <marker date="1555245918199" expanded="true" signature="1338:1339" ph="..." />
-            <marker date="1555245918199" expanded="true" signature="1605:1692" ph="..." />
+            <marker date="1555277717323" expanded="true" signature="106:108" ph="..." />
           </folding>
         </state>
       </provider>

@@ -1,24 +1,19 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QBrush, QImage
+from GameParams import *
+
 
 class MyRect(QtWidgets.QGraphicsRectItem):
-
-    WYSOKOSC_KWADRATU = 28
-    SZEROKOSC_KWADRATU = 28
-
-    WYSOKOSC_MAPY = 24
-    SZEROKOSC_MAPY = 24
-
     def __init__(self, x, y, path):
-        super().__init__(self.SZEROKOSC_KWADRATU + x * self.SZEROKOSC_KWADRATU,\
-                                                self.WYSOKOSC_KWADRATU + (self.SZEROKOSC_MAPY - y - 1) *\
-                                                self.WYSOKOSC_KWADRATU, self.WYSOKOSC_KWADRATU, self.WYSOKOSC_KWADRATU)
+        super().__init__(RECT_WIDTH + x * RECT_WIDTH,\
+                                                RECT_HEIGHT + (MAP_WIDTH - y - 1) *\
+                                                RECT_HEIGHT, RECT_HEIGHT, RECT_HEIGHT)
         self.x = x
         self.y = y
 
         image = QImage(path)
-        image = image.scaled(self.WYSOKOSC_KWADRATU, self.SZEROKOSC_KWADRATU, Qt.IgnoreAspectRatio)
+        image = image.scaled(RECT_HEIGHT, RECT_WIDTH, Qt.IgnoreAspectRatio)
         brush = QBrush(image)
         self.setBrush(brush)
 
