@@ -11,7 +11,7 @@ import Bomb
 import MyRect
 
 
-class MyView(QGraphicsView):
+class Game(QGraphicsView):
 
     end_signal = pyqtSignal(int)
 

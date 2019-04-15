@@ -1,41 +1,32 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMessageBox
-from GameMap import MyView
+from Game import Game
+from TryAgaingWin import TryAgainWin
 import sys
 
 
-class TryAgain(QtWidgets.QMainWindow):
+class WindowsManager(QtWidgets.QMainWindow):
     def __init__(self):
-        super(TryAgain, self).__init__()
-        msg = QMessageBox(QMessageBox.Question, "My title", "My text.", QMessageBox.Yes | QMessageBox.No)
-        self.setCentralWidget(msg)
-        msg.setIcon(QMessageBox.Information)
-        msg.setText("End of the game!!")
-        msg.setInformativeText("Do You want to try again?")
-        self.show()
-        clicked = msg.exec_()
-
-        if clicked == QMessageBox.Yes:
-            print("Yes")
-
-
-class Window(QtWidgets.QMainWindow):
-    def __init__(self):
-        super(Window, self).__init__()
-        self.view = MyView()
+        super(WindowsManager, self).__init__()
+        self.view = Game()
         self.view.end_signal.connect(self.end)
         self.setCentralWidget(self.view)
         self.try_again = None
 
     def end(self, value):
         if value == 1:
-            self.try_again = TryAgain()
-            self.try_again.show()
+            self.try_again = TryAgainWin()
+            self.try_again.try_again_sig.connect(self.try_again_handle)
+            self.try_again.get_user_in()
+
+    def try_again_handle(self, value):
+        if value == 1:
+            self.try_again.close()
+            self.view.clicked_reset()
 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    view = Window()
+    view = WindowsManager()
     view.show()
     sys.exit(app.exec_())
 
