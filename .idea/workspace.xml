@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01d503f1-0d04-49b3-93a3-9b5ff8613bb3" name="Default" comment="MessageBox Handle added.">
-      <change afterPath="$PROJECT_DIR$/TryAgaingWin.py" afterDir="false" />
+    <list default="true" id="01d503f1-0d04-49b3-93a3-9b5ff8613bb3" name="Default" comment="Restart and exit from MessageBox created.">
+      <change afterPath="$PROJECT_DIR$/QtTools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameMap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bomb.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bomb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameParams.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameParams.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TryAgaingWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/TryAgaingWin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,41 +17,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Bomberman$Main_window.coverage" NAME="Main_window Coverage Results" MODIFIED="1555344315471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bomberman$Main_window.coverage" NAME="Main_window Coverage Results" MODIFIED="1555536268779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-482785752">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="4" />
-          <entry key="dummy" value="115" />
-          <entry key="py" value="4864" />
-          <entry key="txt" value="198" />
+          <entry key="dummy" value="125" />
+          <entry key="py" value="6248" />
+          <entry key="txt" value="258" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="313" />
-          <entry key="Python" value="4868" />
+          <entry key="PLAIN_TEXT" value="383" />
+          <entry key="Python" value="6252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="9" />
+          <entry key="py" value="11" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="9" />
+          <entry key="Python" value="11" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -59,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+            <state relative-caret-position="183">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -71,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bomb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+            <state relative-caret-position="170">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -89,11 +93,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="68">
+              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
               <folding>
-                <element signature="e#0#27#0" expanded="true" />
-                <marker date="1555344396711" expanded="true" signature="97:100" ph="..." />
+                <marker date="1555536088667" expanded="true" signature="209:246" ph="..." />
+                <marker date="1555536088667" expanded="true" signature="1621:1679" ph="..." />
               </folding>
             </state>
           </provider>
@@ -102,20 +106,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TryAgaingWin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="-17">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QtTools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <marker date="1555533048905" expanded="true" signature="92:380" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-2139300485/PyQt5/QtWidgets/QWidget.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="953" column="59" lean-forward="true" selection-start-line="953" selection-start-column="59" selection-end-line="953" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="150">
+              <caret line="317" column="44" selection-start-line="317" selection-start-column="44" selection-end-line="317" selection-end-column="44" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -123,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameParams.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="4" selection-start-column="4" selection-end-column="4" />
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -143,11 +168,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>curY</find>
-      <find>numLinesRemoved</find>
-      <find>maz</find>
-      <find>initBoard</find>
-      <find>board</find>
       <find>create_board</find>
       <find>nodes</find>
       <find>bombs</find>
@@ -173,6 +193,11 @@
       <find>kill</find>
       <find>bomb</find>
       <find>emit</find>
+      <find>move_bo</find>
+      <find>is_obstacle_there</find>
+      <find>move_dict</find>
+      <find>self.textbox</find>
+      <find>self.score</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -207,15 +232,17 @@
         <option value="$PROJECT_DIR$/Bombarman_bot.py" />
         <option value="$PROJECT_DIR$/../../Aserehe/aseid-2018-Giteq/Dijkstra.py" />
         <option value="$PROJECT_DIR$/Images/GameParams.py" />
-        <option value="$PROJECT_DIR$/Bot.py" />
         <option value="$PROJECT_DIR$/Player.py" />
-        <option value="$PROJECT_DIR$/GameParams.py" />
         <option value="$PROJECT_DIR$/MyRect.py" />
         <option value="$PROJECT_DIR$/Bomba.py" />
-        <option value="$PROJECT_DIR$/Bomb.py" />
-        <option value="$PROJECT_DIR$/TryAgaingWin.py" />
-        <option value="$PROJECT_DIR$/Main_window.py" />
         <option value="$PROJECT_DIR$/GameMap.py" />
+        <option value="$PROJECT_DIR$/Bomb.py" />
+        <option value="$PROJECT_DIR$/Bot.py" />
+        <option value="$PROJECT_DIR$/QtTools.py" />
+        <option value="$PROJECT_DIR$/TryAgaingWin.py" />
+        <option value="$PROJECT_DIR$/Game.py" />
+        <option value="$PROJECT_DIR$/Main_window.py" />
+        <option value="$PROJECT_DIR$/GameParams.py" />
       </list>
     </option>
   </component>
@@ -235,7 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,6 +277,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,18 +428,26 @@
       <option name="project" value="LOCAL" />
       <updated>1555277923298</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Restart and exit from MessageBox created.">
+      <created>1555344425990</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555344425990</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26234818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2672065" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32740214" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32740214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4572954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -441,7 +476,8 @@
     <MESSAGE value="Refactoring." />
     <MESSAGE value="Added possibility to change bombs range. &#10;Added messagebox after death of the player." />
     <MESSAGE value="MessageBox Handle added." />
-    <option name="LAST_COMMIT_MESSAGE" value="MessageBox Handle added." />
+    <MESSAGE value="Restart and exit from MessageBox created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Restart and exit from MessageBox created." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -523,8 +559,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+        <state relative-caret-position="183">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -533,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Bomb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+        <state relative-caret-position="170">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -545,41 +581,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameParams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main_window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-            <marker date="1555344396711" expanded="true" signature="97:100" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TryAgaingWin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        <state relative-caret-position="-17">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QtTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1555533048905" expanded="true" signature="92:380" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-2139300485/PyQt5/QtWidgets/QWidget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="953" column="59" lean-forward="true" selection-start-line="953" selection-start-column="59" selection-end-line="953" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="150">
+          <caret line="317" column="44" selection-start-line="317" selection-start-column="44" selection-end-line="317" selection-end-column="44" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <marker date="1555536088667" expanded="true" signature="209:246" ph="..." />
+            <marker date="1555536088667" expanded="true" signature="1621:1679" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameParams.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>

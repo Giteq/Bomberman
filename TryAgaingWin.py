@@ -1,9 +1,10 @@
-from PyQt5.QtWidgets import QMessageBox, QMainWindow
+from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtCore import pyqtSignal
 import sys
+from QtTools import MyQMainWindow
 
 
-class TryAgainWin(QMainWindow):
+class TryAgainWin(MyQMainWindow):
 
     try_again_sig = pyqtSignal(int)
 
@@ -14,6 +15,7 @@ class TryAgainWin(QMainWindow):
         self.msg.setIcon(QMessageBox.Information)
         self.msg.setText("End of the game!!")
         self.msg.setInformativeText("Do You want to try again?")
+        self.center_window_pos()
         self.show()
 
     def get_user_in(self):

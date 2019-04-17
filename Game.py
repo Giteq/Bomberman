@@ -14,6 +14,7 @@ import MyRect
 class Game(QGraphicsView):
 
     end_signal = pyqtSignal(int)
+    score_signal = pyqtSignal(int)
 
     def __init__(self):
         """
@@ -54,27 +55,16 @@ class Game(QGraphicsView):
         self.scene = QGraphicsScene(0, 0, WINDOW_HEIGHT, WINDOW_WIDTH)
         self.view = QGraphicsView(self.scene)
         self.draw_board()
-        self.reset_button = QPushButton('Reset', self)
-        self.reset_button.move(RECT_WIDTH * (MAP_HEIGHT + 1.5), RECT_WIDTH)
-        self.reset_button.clicked.connect(self.clicked_reset)
-        self.reset_button.setStyleSheet("background-color: red")
-        self.reset_button.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.scene.addWidget(self.reset_button)
         self.setScene(self.scene)
         self.timer.timeout.connect(self.update)
         self.timer.start(10)
         self.timer_bots = QTimer()
         self.timer_bots.timeout.connect(self.move_bot)
         self.timer_bots.start(200)
-        self.textbox = QtWidgets.QGraphicsTextItem()
-        self.textbox.setPos(
-            QtCore.QPointF(RECT_WIDTH * (MAP_HEIGHT + 1.5), RECT_WIDTH * 3))
-        self.textbox.setPlainText("Score = " + str(self.score))
 
-        self.scene.addItem(self.textbox)
         self.items = self.scene.items()
 
-    def clicked_reset(self):
+    def reinit_game(self):
         """
         Function gets game to init state.
         :return:
@@ -103,7 +93,6 @@ class Game(QGraphicsView):
 
         :return:
         """
-        self.textbox.setPlainText("Score = " + str(self.score))
         for bomb in self.bombs:
             self.board[bomb.x][bomb.y] = 'XX'  # Add bomb to the board.
             self.draw_image(bomb.x, bomb.y, path_bomb)
@@ -117,6 +106,7 @@ class Game(QGraphicsView):
                 self.draw_image(bot.last_x, bot.last_y, path_road)
                 self.draw_image(bot.x, bot.y, path_bot)
 
+        self.score_signal.emit(self.score)
         self.boom()
 
     def read_board_xml(self, filename="map.xml"):
@@ -325,7 +315,7 @@ class Game(QGraphicsView):
                 end = self.kill_players(bomb)
                 self.bombs.remove(bomb)
                 if bomb.owner == self.player.ind:
-                    self.score += 1
+                    self.score += bomb_range
         if end:
             self.end_signal.emit(1)
 
@@ -336,7 +326,9 @@ class Game(QGraphicsView):
         :return:
         """
         for field in bomb.get_cords_in_range():
-            if self.board[field[0]][field[1]] != "##":
+            if 0 < field[0] < MAP_WIDTH and \
+                0 < field[1] < MAP_HEIGHT and \
+                self.board[field[0]][field[1]] != "##":
                 self.board[field[0]][field[1]] = "  "
                 self.draw_image(field[0], field[1], path_road)
         self.board[bomb.x][bomb.y] = "  "
@@ -359,12 +351,16 @@ class Game(QGraphicsView):
         return not self.player.alive
 
     def move_bot(self):
+        """
+        Function handles bot move.
+        :return:
+        """
         for bot in self.bots:
             old_x = bot.x
             old_y = bot.y
             bot.move()
             if bot.is_bomb_left():
-                self.bombs.append(Bomb.Bomb(old_x , old_y , time.time() , 1))
+                self.bombs.append(Bomb.Bomb(old_x, old_y, time.time(), 1))
                 self.board[bot.last_x][bot.last_y] = "XX"
             else:
                 self.board[old_x][old_y] = "  "

@@ -1,11 +1,14 @@
+from GameParams import *
+
+
 class Bomb:
-    def __init__(self, x, y, start, owner, boom_range=2):
+    def __init__(self, x, y, start, owner):
         self.x = x
         self.y = y
         self.exploded = False
         self.start = start
         self.owner = owner
-        self.boom_range = boom_range
+        self.boom_range = bomb_range
 
     def boom(self):
         self.exploded = True
